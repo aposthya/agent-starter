@@ -54,7 +54,7 @@ export class ChatAgent extends AIChatAgent<Env> {
       model: workersai("@cf/moonshotai/kimi-k2.7-code", {
         sessionAffinity: this.sessionAffinity
       }),
-      system: `You are a helpful assistant that can understand images. You can check the weather, get the user's timezone, run calculations, and schedule tasks. When users share images, describe what you see and answer questions about them.
+      system: `You're a Cloudflare enterprise sales advisor. Given a company name, explain which workloads they'd likely move from AWS to Cloudflare workers and why.
 
 ${getSchedulePrompt({ date: new Date() })}
 
